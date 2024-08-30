@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from Server.JsonHandler import JSONHandler
 import Server.TcpServer as TcpServer
 
@@ -6,8 +8,10 @@ import API.Tools.Calculator as CalculatorTool
 import API.Messages.Calculator as CalculatorMessage
 
 if __name__ == "__main__":
+    # 加载 .env 文件
+    load_dotenv()
     # 初始化OpenAI请求处理器
-    api_key = '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'
+    api_key = os.getenv("OPENAI_API_KEY")
     processor = OpenAIRequestProcessor(api_key=api_key)
 
     # 配置服务器
