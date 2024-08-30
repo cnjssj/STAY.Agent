@@ -4,8 +4,8 @@ from Server.JsonHandler import JSONHandler
 import Server.TcpServer as TcpServer
 
 from OpenAI.OpenAIRequestProcessor import OpenAIRequestProcessor
-import ServiceAPI.Tools.Calculator as CalculatorTool
-import ServiceAPI.Messages.Calculator as CalculatorMessage
+import API.Tools.Calculator as CalculatorTool
+import API.Messages.Calculator as CalculatorMessage
 
 if __name__ == "__main__":
     # 加载 .env 文件
